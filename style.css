@@ -1,0 +1,208 @@
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+
+ body {
+   width: 100%;
+   height: 100vh;
+   background-color: #FF9900;
+   padding: 15px;
+   font-family: 'Roboto', sans-serif;
+ }
+
+ .audio_wrapper {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   margin: auto;
+   bottom: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+ .audio_container {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   margin: auto;
+   bottom: 0;
+   background-color: #FDEED8;
+   border-radius: 20px;
+   padding: 15px;
+   width: 350px;
+   height: 550px;
+   box-shadow: 7px 7px 15px rgb(205 43 51);
+   overflow: hidden;
+   text-transform: capitalize;
+ }
+
+ .audio_image {
+   position: relative;
+   display: block;
+   margin: 40px auto;
+   width: 175px;
+   height: 175px;
+   background-image: url('images/linkin_park.png');
+   background-size: cover;
+   box-shadow: 10px 10px 10px rgb(17, 17, 16);
+ }
+
+ .song_name {
+   margin-top: 55px;
+   font-size: 28px;
+   text-align: center;
+   font-weight: 500;
+ }
+
+ .artist {
+   font-size: 18px;
+   text-align: center;
+   margin-top: 12px;
+   font-weight: 300;
+   margin-bottom: 15px;
+ }
+
+ .audio_slider {
+  margin-top: 30px;
+   width: 100%;
+   position: relative;
+ }
+
+ .type_audio {
+   -webkit-appearance: none;
+   width: 100%;
+   height: 3px;
+   border-radius: 10px;
+   cursor: pointer;
+   background: #FF9900;
+   overflow: hidden;
+ }
+
+ .type_audio::-webkit-slider-thumb {
+   -webkit-appearance: none;
+   width: 1px;
+   height: 15px;
+   box-shadow: -400px 0 0 400px #fff;
+ }
+
+ .current_time,
+ .audio_duration {
+   font-size: 12px;
+ }
+
+ .audio_duration {
+   position: absolute;
+   right: 0;
+ }
+
+ .audio_buttons {
+   width: 60%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: auto;
+   margin-top: 30px;
+ }
+
+ .btn_play {
+   position: relative;
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   background: #fff;
+   cursor: pointer;
+   border: none;
+ }
+
+ .btn_play span {
+   position: absolute;
+   top: 50%;
+   left: 25%;
+   transform: translateY(-50%);
+   width: 10px;
+   height: 28px;
+   border-radius: 2px;
+   background: #FF9900;
+   transition: .5s;
+   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+ }
+
+ .btn_play span:nth-child(2) {
+   left: 55%;
+   transform-origin: center;
+ }
+
+ .btn_play.pause span:nth-child(2) {
+   transform: translateY(-50%) scaleY(0);
+ }
+
+ .btn_play.pause span:nth-child(1) {
+   width: 35%;
+   left: 53%;
+   transform: translate(-50%, -50%);
+   border-radius: 0;
+   clip-path: polygon(0 0, 100% 50%, 100% 50%, 0% 100%);
+ }
+
+ .btn_play.pause {
+   animation: pulse 2s linear infinite;
+ }
+
+ @keyframes pulse {
+   0% {
+     box-shadow: 0;
+   }
+
+   50% {
+     box-shadow: 0 0 0 5px rgba(141, 139, 139, 0.1);
+   }
+
+   100% {
+     box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.4);
+   }
+ }
+
+ button {
+   border: none;
+   background: transparent;
+ }
+
+ .fa-solid {
+   width: 30px;
+   height: 30px;
+   background: #fff;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+ }
+
+ footer {
+   position: absolute;
+   left: 0;
+   right: 0;
+   bottom: 0;
+ }
+
+ .footer_links {
+   font-size: 14px;
+   margin: 25px;
+   display: flex;
+   justify-content: space-between;
+ }
+
+ .footer_links_logo {
+   margin-left: 25px;
+   width: 45px;
+ }
+
+ .footer_links_info a {
+   color: black;
+   text-decoration: none;
+ }
